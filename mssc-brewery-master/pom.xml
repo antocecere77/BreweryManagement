@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>guru.springframework</groupId>
+	<groupId>com.github.antocecere77</groupId>
 	<artifactId>mssc-brewery</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>mssc-brewery</name>

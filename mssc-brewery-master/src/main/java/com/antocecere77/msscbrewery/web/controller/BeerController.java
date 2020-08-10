@@ -1,7 +1,7 @@
-package guru.springframework.msscbrewery.web.controller;
+package com.antocecere77.msscbrewery.web.controller;
 
-import guru.springframework.msscbrewery.services.BeerService;
-import guru.springframework.msscbrewery.web.model.BeerDto;
+import com.antocecere77.msscbrewery.web.model.BeerDto;
+import com.antocecere77.msscbrewery.services.BeerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,4 +1,4 @@
-package guru.springframework.msscbrewery;
+package com.antocecere77.msscbrewery;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
