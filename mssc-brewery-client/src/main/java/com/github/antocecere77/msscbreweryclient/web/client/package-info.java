@@ -1,0 +1,1 @@
+package com.github.antocecere77.msscbreweryclient.web.client;
