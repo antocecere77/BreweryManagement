@@ -2,6 +2,9 @@ package com.antocecere77.msscbrewery.web.controller.v2;
 
 import com.antocecere77.msscbrewery.services.v2.BeerServiceV2;
 import com.antocecere77.msscbrewery.web.model.v2.BeerDtoV2;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import lombok.val;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,15 +14,13 @@ import javax.validation.Valid;
 import java.util.UUID;
 
 //@Validated
+@Slf4j
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("/api/v2/beer")
 public class BeerControllerV2 {
 
     private final BeerServiceV2 beerServicev2;
-
-    public BeerControllerV2(BeerServiceV2 beerServicev2) {
-        this.beerServicev2 = beerServicev2;
-    }
 
     @GetMapping({"/{beerId}"})
     public ResponseEntity<BeerDtoV2> getBeer(@PathVariable("beerId") UUID beerId){
@@ -29,8 +30,12 @@ public class BeerControllerV2 {
 
     @PostMapping
     public ResponseEntity handlePost(@Valid @RequestBody BeerDtoV2 beerDto) {
-        BeerDtoV2 saveDto = beerServicev2.saveNewBeer(beerDto);
-        HttpHeaders headers = new HttpHeaders();
+
+        log.debug("in handle post...");
+
+        val saveDto = beerServicev2.saveNewBeer(beerDto);
+        var headers = new HttpHeaders();
+
         //TODO add hostname to uri
         headers.add("Location", "/api/v1/beer/" + saveDto.getId().toString());
 
