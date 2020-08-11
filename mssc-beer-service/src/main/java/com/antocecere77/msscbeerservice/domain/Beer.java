@@ -1,4 +1,4 @@
-package com.antocecere77.msscbeerservice.web.domain;
+package com.antocecere77.msscbeerservice.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
