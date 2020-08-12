@@ -1,5 +1,0 @@
-[source,bash]
-----
-$ http GET 'https://dev.prongframework.guru:80/api/v1/beer/d59de848-8f1a-45f8-ae89-ff31f033b90d?iscold=yes' \
-    'Accept:application/json'
-----
