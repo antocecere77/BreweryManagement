@@ -2,7 +2,9 @@ package guru.springframework.msscjacksonexamples.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -41,11 +43,12 @@ public class BeerDto {
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private BigDecimal price;
 
-    @JsonFormat(pattern = "yyyy-MM-dd", shape = JsonFormat.Shape.STRING)
+    @JsonFormat(pattern="yyyy-MM-dd'T'HH:mm:ssZ", shape=JsonFormat.Shape.STRING)
     private OffsetDateTime createdDate;
 
     private OffsetDateTime lastUpdatedDate;
 
+    @JsonDeserialize(using = LocalDateDeserializer.class)
     @JsonSerialize(using= LocalDateSerializer.class)
     private LocalDate myLocaDate;
 }
