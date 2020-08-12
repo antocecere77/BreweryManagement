@@ -1,5 +1,5 @@
 [source,bash]
 ----
-$ curl 'https://dev.prongframework.guru:80/api/v1/beer/56dbe22b-2b90-4bf5-aa14-b5e5c5ff21f5?iscold=yes' -i -X GET \
+$ curl 'https://dev.prongframework.guru:80/api/v1/beer/d30d1194-a0fe-4546-90a0-0b3256635fb3?iscold=yes' -i -X GET \
     -H 'Accept: application/json'
 ----
