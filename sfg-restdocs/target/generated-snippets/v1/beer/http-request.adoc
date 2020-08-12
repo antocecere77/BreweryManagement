@@ -1,7 +1,7 @@
 [source,http,options="nowrap"]
 ----
-GET /api/v1/beer/ea0fdd94-ad5b-42a2-aa97-e0b2e166d5fd?iscold=yes HTTP/1.1
+GET /api/v1/beer/d59de848-8f1a-45f8-ae89-ff31f033b90d?iscold=yes HTTP/1.1
 Accept: application/json
-Host: localhost:8080
+Host: dev.prongframework.guru:80
 
 ----
