@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @RequiredArgsConstructor
@@ -16,6 +17,11 @@ import java.util.UUID;
 public class BeerController {
 
     private final BeerService beerService;
+
+    @GetMapping
+    public ResponseEntity<List<BeerDto>> getBeerById() {
+        return new ResponseEntity<>(beerService.findAll(), HttpStatus.OK);
+    }
 
     @GetMapping("/{beerId}")
     public ResponseEntity<BeerDto> getBeerById(@PathVariable("beerId") UUID beerId){

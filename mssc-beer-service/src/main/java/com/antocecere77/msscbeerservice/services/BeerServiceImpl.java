@@ -8,6 +8,8 @@ import com.antocecere77.msscbeerservice.web.model.BeerDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @RequiredArgsConstructor
@@ -16,6 +18,13 @@ public class BeerServiceImpl implements BeerService {
 
     private final BeerRepository beerRepository;
     private final BeerMapper beerMapper;
+
+    public List<BeerDto> findAll() {
+        List<BeerDto> result = new ArrayList<>();
+
+        beerRepository.findAll().forEach(x -> result.add(beerMapper.beerToBeerDto(x)));;
+        return result;
+    }
 
     @Override
     public BeerDto getById(UUID beerId) {
