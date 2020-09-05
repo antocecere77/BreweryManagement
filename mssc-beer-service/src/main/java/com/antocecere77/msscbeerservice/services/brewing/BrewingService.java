@@ -1,4 +1,4 @@
-package com.antocecere77.msscbeerservice.services;
+package com.antocecere77.msscbeerservice.services.brewing;
 
 import com.antocecere77.msscbeerservice.config.JmsConfig;
 import com.antocecere77.msscbeerservice.domain.Beer;
