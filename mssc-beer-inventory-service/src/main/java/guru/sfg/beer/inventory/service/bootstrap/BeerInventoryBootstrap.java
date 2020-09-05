@@ -19,9 +19,9 @@ public class BeerInventoryBootstrap implements CommandLineRunner {
     public static final String BEER_1_UPC = "0631234200036";
     public static final String BEER_2_UPC = "0631234300019";
     public static final String BEER_3_UPC = "0083783375213";
-    public static final UUID BEER_1_UUID = UUID.fromString("0a818933-087d-47f2-ad83-2f986ed087eb");
-    public static final UUID BEER_2_UUID = UUID.fromString("a712d914-61ea-4623-8bd0-32c0f6545bfd");
-    public static final UUID BEER_3_UUID = UUID.fromString("026cc3c8-3a0c-4083-a05b-e908048c1b08");
+    public static final UUID BEER_1_UUID = UUID.fromString("54ba6080-cecb-4632-87cd-ce6277be9230");
+    public static final UUID BEER_2_UUID = UUID.fromString("7af9894f-aef8-4103-8b05-4abb39cd6a28");
+    public static final UUID BEER_3_UUID = UUID.fromString("de7b1b0a-a32f-4ebb-ac26-66140f1f53d4");
 
     private final BeerInventoryRepository beerInventoryRepository;
 
