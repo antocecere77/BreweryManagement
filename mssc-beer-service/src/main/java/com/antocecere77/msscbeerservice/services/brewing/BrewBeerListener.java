@@ -2,8 +2,8 @@ package com.antocecere77.msscbeerservice.services.brewing;
 
 import com.antocecere77.msscbeerservice.config.JmsConfig;
 import com.antocecere77.msscbeerservice.domain.Beer;
-import com.antocecere77.msscbeerservice.events.BrewBeerEvent;
-import com.antocecere77.msscbeerservice.events.NewInventoryEvent;
+import com.antocecere77.common.events.BrewBeerEvent;
+import com.antocecere77.common.events.NewInventoryEvent;
 import com.antocecere77.msscbeerservice.repositories.BeerRepository;
 import com.antocecere77.msscbeerservice.web.model.BeerDto;
 import lombok.RequiredArgsConstructor;
