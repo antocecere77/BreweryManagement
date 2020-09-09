@@ -1,7 +1,5 @@
 package guru.springframework.msscssm.services;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import guru.springframework.msscssm.domain.Payment;
 import guru.springframework.msscssm.domain.PaymentEvent;
 import guru.springframework.msscssm.domain.PaymentState;
