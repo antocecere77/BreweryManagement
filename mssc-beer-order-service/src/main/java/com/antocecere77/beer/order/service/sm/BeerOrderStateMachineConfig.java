@@ -1,4 +1,4 @@
-package com.antocecere77.beer.order.service.services.sm;
+package com.antocecere77.beer.order.service.sm;
 
 import com.antocecere77.beer.order.service.domain.BeerOrderStatusEnum;
 import com.antocecere77.beer.order.service.domain.BeerOrderEventEnum;
