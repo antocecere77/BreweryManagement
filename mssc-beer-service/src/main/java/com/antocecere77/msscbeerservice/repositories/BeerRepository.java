@@ -1,7 +1,7 @@
 package com.antocecere77.msscbeerservice.repositories;
 
 import com.antocecere77.msscbeerservice.domain.Beer;
-import com.antocecere77.msscbeerservice.web.model.BeerStyleEnum;
+import com.antocecere77.brewery.model.BeerStyleEnum;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

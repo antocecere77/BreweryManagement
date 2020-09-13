@@ -2,8 +2,8 @@ package com.antocecere77.msscbeerservice.web.controller;
 
 import com.antocecere77.msscbeerservice.bootstrap.BeerLoader;
 import com.antocecere77.msscbeerservice.services.BeerService;
-import com.antocecere77.msscbeerservice.web.model.BeerDto;
-import com.antocecere77.msscbeerservice.web.model.BeerStyleEnum;
+import com.antocecere77.brewery.model.BeerDto;
+import com.antocecere77.brewery.model.BeerStyleEnum;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

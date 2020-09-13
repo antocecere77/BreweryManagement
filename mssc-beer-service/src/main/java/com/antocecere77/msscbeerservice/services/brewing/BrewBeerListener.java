@@ -2,10 +2,10 @@ package com.antocecere77.msscbeerservice.services.brewing;
 
 import com.antocecere77.msscbeerservice.config.JmsConfig;
 import com.antocecere77.msscbeerservice.domain.Beer;
-import com.antocecere77.common.events.BrewBeerEvent;
-import com.antocecere77.common.events.NewInventoryEvent;
+import com.antocecere77.brewery.model.events.BrewBeerEvent;
+import com.antocecere77.brewery.model.events.NewInventoryEvent;
 import com.antocecere77.msscbeerservice.repositories.BeerRepository;
-import com.antocecere77.msscbeerservice.web.model.BeerDto;
+import com.antocecere77.brewery.model.BeerDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jms.annotation.JmsListener;

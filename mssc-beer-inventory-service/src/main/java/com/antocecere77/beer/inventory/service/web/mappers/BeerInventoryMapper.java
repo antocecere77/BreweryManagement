@@ -1,7 +1,7 @@
 package com.antocecere77.beer.inventory.service.web.mappers;
 
 import com.antocecere77.beer.inventory.service.domain.BeerInventory;
-import com.antocecere77.beer.inventory.service.web.model.BeerInventoryDto;
+import com.antocecere77.brewery.model.BeerInventoryDto;
 import org.mapstruct.Mapper;
 
 /**

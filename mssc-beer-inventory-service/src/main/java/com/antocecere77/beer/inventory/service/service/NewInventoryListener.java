@@ -3,7 +3,7 @@ package com.antocecere77.beer.inventory.service.service;
 import com.antocecere77.beer.inventory.service.config.JmsConfig;
 import com.antocecere77.beer.inventory.service.domain.BeerInventory;
 import com.antocecere77.beer.inventory.service.repositories.BeerInventoryRepository;
-import com.antocecere77.common.events.NewInventoryEvent;
+import com.antocecere77.brewery.model.events.NewInventoryEvent;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jms.annotation.JmsListener;

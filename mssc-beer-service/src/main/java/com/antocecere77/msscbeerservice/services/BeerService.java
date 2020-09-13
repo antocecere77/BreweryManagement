@@ -1,12 +1,10 @@
 package com.antocecere77.msscbeerservice.services;
 
-import com.antocecere77.msscbeerservice.web.model.BeerDto;
-import com.antocecere77.msscbeerservice.web.model.BeerPagedList;
-import com.antocecere77.msscbeerservice.web.model.BeerStyleEnum;
+import com.antocecere77.brewery.model.BeerDto;
+import com.antocecere77.brewery.model.BeerPagedList;
+import com.antocecere77.brewery.model.BeerStyleEnum;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.http.ResponseEntity;
 
-import java.util.List;
 import java.util.UUID;
 
 public interface BeerService {

@@ -1,9 +1,9 @@
 package com.antocecere77.msscbeerservice.web.controller;
 
 import com.antocecere77.msscbeerservice.services.BeerService;
-import com.antocecere77.msscbeerservice.web.model.BeerDto;
-import com.antocecere77.msscbeerservice.web.model.BeerPagedList;
-import com.antocecere77.msscbeerservice.web.model.BeerStyleEnum;
+import com.antocecere77.brewery.model.BeerDto;
+import com.antocecere77.brewery.model.BeerPagedList;
+import com.antocecere77.brewery.model.BeerStyleEnum;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
@@ -11,7 +11,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.UUID;
 
 @RequiredArgsConstructor

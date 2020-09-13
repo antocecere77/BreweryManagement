@@ -2,7 +2,7 @@ package com.antocecere77.msscbeerservice.services.brewing;
 
 import com.antocecere77.msscbeerservice.config.JmsConfig;
 import com.antocecere77.msscbeerservice.domain.Beer;
-import com.antocecere77.common.events.BrewBeerEvent;
+import com.antocecere77.brewery.model.events.BrewBeerEvent;
 import com.antocecere77.msscbeerservice.repositories.BeerRepository;
 import com.antocecere77.msscbeerservice.services.inventory.BeerInventoryService;
 import com.antocecere77.msscbeerservice.web.mapper.BeerMapper;
