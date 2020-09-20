@@ -1,4 +1,4 @@
-package com.antocecere77.beer.inventory.service.service;
+package com.antocecere77.beer.inventory.service.services;
 
 import com.antocecere77.beer.inventory.service.config.JmsConfig;
 import com.antocecere77.beer.inventory.service.domain.BeerInventory;

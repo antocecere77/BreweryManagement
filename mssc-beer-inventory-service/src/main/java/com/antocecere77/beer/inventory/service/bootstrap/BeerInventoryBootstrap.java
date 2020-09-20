@@ -8,9 +8,6 @@ import org.springframework.boot.CommandLineRunner;
 
 import java.util.UUID;
 
-/**
- * Created by jt on 2019-06-07.
- */
 @Slf4j
 @RequiredArgsConstructor
 //@Component
