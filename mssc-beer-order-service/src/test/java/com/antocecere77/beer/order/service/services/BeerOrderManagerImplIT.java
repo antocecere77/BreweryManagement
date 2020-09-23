@@ -72,7 +72,7 @@ public class BeerOrderManagerImplIT {
     }
 
     @Test
-    void testNewToAllocated() throws JsonProcessingException {
+    void testNewToAllocated() throws JsonProcessingException, InterruptedException {
 
         BeerDto beerDto = BeerDto.builder().id(beerId).upc("12345").build();
 
@@ -82,8 +82,13 @@ public class BeerOrderManagerImplIT {
         BeerOrder beerOrder = createBeerOrder();
 
         BeerOrder savedBeerOrder = beerOrderManager.newBeerOrder(beerOrder);
+
+        Thread.sleep(5000);
+
+        savedBeerOrder = beerOrderRepository.findById(savedBeerOrder.getId()).get();
+
         assertNotNull(savedBeerOrder);
-        assertEquals(BeerOrderStatusEnum.VALIDATION_PENDING, savedBeerOrder.getOrderStatus());
+        assertEquals(BeerOrderStatusEnum.ALLOCATED, savedBeerOrder.getOrderStatus());
     }
 
     public BeerOrder createBeerOrder(){
