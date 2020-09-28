@@ -20,6 +20,7 @@ public class AllocationListener {
     public void listen(AllocateOrderRequest request){
         AllocateOrderResult.AllocateOrderResultBuilder builder = AllocateOrderResult.builder();
         builder.beerOrderDto(request.getBeerOrderDto());
+        builder.allocationError(false);
 
         try{
             Boolean allocationResult = allocationService.allocateOrder(request.getBeerOrderDto());
