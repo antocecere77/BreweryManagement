@@ -16,8 +16,9 @@ public class BeerOrderValidationListener {
     private final JmsTemplate jmsTemplate;
 
     @JmsListener(destination = JmsConfig.VALIDATE_ORDER_QUEUE)
-    public void listen(ValidateOrderRequest validateOrderRequest){
+    public void listen(ValidateOrderRequest validateOrderRequest) throws InterruptedException {
         Boolean isValid = validator.validateOrder(validateOrderRequest.getBeerOrder());
+        Thread.sleep(500);
 
         jmsTemplate.convertAndSend(JmsConfig.VALIDATE_ORDER_RESPONSE_QUEUE,
                 ValidateOrderResult.builder()
