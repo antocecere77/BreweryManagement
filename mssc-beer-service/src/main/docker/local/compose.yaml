@@ -71,6 +71,7 @@ services:
       SPRING_ARTEMIS_HOST: jms
       SPRING_CLOUD_CONFIG_URI: http://config:8888
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
+    restart: on-failure
   order-service:
     image: antocecere77/mssc-beer-order-service
     ports:
@@ -89,6 +90,7 @@ services:
       SPRING_CLOUD_CONFIG_URI: http://config:8888
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SFG_BREWERY_BEER-SERVICE_HOST: http://beer-service:8080
+    restart: on-failure
   gateway:
     image: antocecere77/mssc-brewery-gateway
     ports:
