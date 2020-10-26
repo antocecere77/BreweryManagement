@@ -54,6 +54,7 @@ services:
       - config
     environment:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+      SPRING_PROFILES_ACTIVE: local-compose
   beer-service:
     image: antocecere77/mssc-beer-service
     ports:
@@ -103,5 +104,5 @@ services:
       - beer-service
       - inventory_failerover
     environment:
-      SPRING_PROFILES_ACTIVE: local-discovery,local-secure-compose
+      SPRING_PROFILES_ACTIVE: local-discovery,local-compose
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
