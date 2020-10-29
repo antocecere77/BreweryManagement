@@ -13,6 +13,14 @@ services:
     restart: on-failure
     depends_on:
       - elasticsearch
+  filebeat:
+    image: docker.elastic.co/beats/filebeat:7.7.0
+    volumes:
+      - ./filebeat/filebeat.docker.yml:/usr/share/filebeat/filebeat.yml:ro # Configuration file
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro           # Docker logs
+      - /var/run/docker.sock:/var/run/docker.sock:ro                       # Additional information about containers
+    user: root                                                             # Allow access to log files and docker.sock
+    restart: on-failure
   jms:
     image: vromero/activemq-artemis
     ports:
@@ -58,6 +66,8 @@ services:
       SPRING_CLOUD_CONFIG_URI: http://config:8888
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
     restart: on-failure
+    labels:
+      collect_logs_with_filebeat: "true"
   inventory_failerover:
     image: antocecere77/mssc-inventory-failover
     ports:
@@ -86,6 +96,8 @@ services:
       SPRING_CLOUD_CONFIG_URI: http://config:8888
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
     restart: on-failure
+    labels:
+      collect_logs_with_filebeat: "true"
   order-service:
     image: antocecere77/mssc-beer-order-service
     ports:
@@ -105,6 +117,8 @@ services:
       EUREKA_INSTANCE_PREFER_IP_ADDRESS: 'true'
       SFG_BREWERY_BEER-SERVICE_HOST: http://beer-service:8080
     restart: on-failure
+    labels:
+      collect_logs_with_filebeat: "true"
   gateway:
     image: antocecere77/mssc-brewery-gateway
     ports:
@@ -119,3 +133,5 @@ services:
     environment:
       SPRING_PROFILES_ACTIVE: local-discovery,local-compose
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
+    labels:
+      collect_logs_with_filebeat: "true"
