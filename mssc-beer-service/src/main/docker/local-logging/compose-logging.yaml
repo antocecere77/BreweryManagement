@@ -68,6 +68,7 @@ services:
     restart: on-failure
     labels:
       collect_logs_with_filebeat: "true"
+      decode_log_event_to_json_object: "true"
   inventory_failerover:
     image: antocecere77/mssc-inventory-failover
     ports:
@@ -98,6 +99,7 @@ services:
     restart: on-failure
     labels:
       collect_logs_with_filebeat: "true"
+      decode_log_event_to_json_object: "true"
   order-service:
     image: antocecere77/mssc-beer-order-service
     ports:
@@ -119,6 +121,7 @@ services:
     restart: on-failure
     labels:
       collect_logs_with_filebeat: "true"
+      decode_log_event_to_json_object: "true"
   gateway:
     image: antocecere77/mssc-brewery-gateway
     ports:
@@ -135,3 +138,4 @@ services:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://netflix:eureka@eureka:8761/eureka/
     labels:
       collect_logs_with_filebeat: "true"
+      decode_log_event_to_json_object: "true"
